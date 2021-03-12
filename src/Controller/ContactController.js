@@ -58,9 +58,9 @@ exports.Update = (req, res) => {
 };
 
 // Delete
-exports.Delete = function (req, res) {
+exports.Delete = (req, res) => {
     Contact.remove({
-        _id: req.params.contact_id
+        _id: req.params.id
     }, (err, contact) => {
         if (err)
             res.json({ status: "error", message: err });
